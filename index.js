@@ -3,12 +3,14 @@ const path = require ('path');
 const config = require('config');
 
 const port = process.env.PORT || config.get('server.port');
-const pedidoAtual = {
+const listaMarcacao = [
+    {
     cliente:"a", 
     barbeiro: "a", 
     endereço:"a", 
     horario:"a",
-},
+}
+];
 
 const app = express();
 
@@ -16,7 +18,7 @@ app.set('port', port);
 
 app.route('/Agendamentos').get(
     (req, res) => {
-        res.status(200).json(pedidoAtual);
+        res.status(200).json(listaMarcacao);
     }
 )
 
