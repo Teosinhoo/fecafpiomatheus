@@ -4,10 +4,10 @@ const config = require('config');
 
 const port = process.env.PORT || config.get('server.port');
 const pedidoAtual = {
-    cliente:"", 
-    barbeiro: "", 
-    endereço:"", 
-    horario:"",
+    cliente:"a", 
+    barbeiro: "a", 
+    endereço:"a", 
+    horario:"a",
 },
 
 const app = express();
