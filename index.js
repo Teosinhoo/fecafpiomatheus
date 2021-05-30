@@ -10,17 +10,17 @@ const pedidoAtual = {
     horario:"a",
 },
 
-const Entrar = express();
+const app = express();
 
-Entrar.set('port', port);
+app.set('port', port);
 
-Entrar.route('/Agendamentos').get(
+app.route('/Agendamentos').get(
     (req, res) => {
         res.status(200).json(pedidoAtual);
     }
 )
 
-Entrar.listen(port, () => {
+app.listen(port, () => {
     ("Servidor iniciado na porta " + port);
 })
 console.log("iniciado")
